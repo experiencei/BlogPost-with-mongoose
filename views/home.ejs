@@ -1,0 +1,11 @@
+ <%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= paragraph%></p>
+
+<%items.forEach(item => { %>
+    <h1><%=item.day %></h1>
+    <p><%= item.post.substring(0 , 100)+' ...'%><a href="/posts/<%= item._id %>">Readmore</a></p>
+    
+<%})%>
+    
+<%- include("partials/footer") -%>
